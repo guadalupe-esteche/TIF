@@ -1,0 +1,163 @@
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Alinea el contenido principal (main) en el centro */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra horizontalmente */
+    text-align: center;
+    /* Centra el texto */
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.movie {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.movie h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.movie p {
+    margin: 5px 0;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    /* Color de fondo semi-transparente */
+    color: white;
+    padding: 0.1rem;
+    /* Reduce el padding para ocupar menos espacio */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8rem;
+    /* Fuente más pequeña */
+    line-height: 1.2;
+    /* Reduce el interlineado */
+    border-top: 1px solid #666;
+    /* Agrega una línea delgada en la parte superior */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra sutil para darle profundidad */
+}
+
+
+form {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    text-align: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+    text-align: center;
+}
+
+.slider-box {
+    width: 100%; /* Cambia a 100% para que el carrusel se ajuste al ancho del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.slider-box ul {
+    display: flex;
+    padding: 0;
+    width: 500%; /* 100% * número de imágenes */
+    animation: slide 30s infinite alternate ease-in-out;
+    margin: 0; /* Asegúrate de que no haya margen adicional */
+    transition: margin-left 3s; /* Suaviza la transición */
+}
+
+.slider-box li {
+    width: 100%; /* Cada imagen ocupa el 100% del contenedor del carrusel */
+    list-style: none;
+    position: relative;
+}
+
+.slider-box img {
+    width: 85%; /* Asegúrate de que las imágenes ocupen todo el ancho del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: -300%;
+    }
+}
